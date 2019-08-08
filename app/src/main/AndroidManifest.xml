@@ -16,11 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".BoundService.SecondActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".MessengerService.MyMessengerActivity" />
 
-        <service android:name=".MyStartedService" />
-        <service android:name=".MyIntentService" />
-        <service android:name=".MyBoundService" />
+        <service android:name=".StartedService.MyStartedService" />
+        <service android:name=".StartedService.MyIntentService" />
+        <service android:name=".BoundService.MyBoundService" />
+        <service android:name=".MessengerService.MyMessengerService" android:process=":my_own_process" />
     </application>
 
 </manifest>

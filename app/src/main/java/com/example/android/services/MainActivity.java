@@ -13,6 +13,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.android.services.BoundService.SecondActivity;
+import com.example.android.services.MessengerService.MyMessengerActivity;
+import com.example.android.services.StartedService.MyIntentService;
+import com.example.android.services.StartedService.MyStartedService;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView txvIntentServiceResult, txvStartedServiceResult;
@@ -79,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void moveToSecondActivity(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
+
+    public void moveToMessengerActivity(View view) {
+        Intent intent = new Intent(this, MyMessengerActivity.class);
         startActivity(intent);
     }
 
