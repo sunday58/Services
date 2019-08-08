@@ -16,8 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SecondActivity"  android:screenOrientation="portrait"/>
+
         <service android:name=".MyStartedService" />
         <service android:name=".MyIntentService" />
+        <service android:name=".MyBoundService" />
     </application>
 
 </manifest>

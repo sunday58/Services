@@ -20,6 +20,7 @@
         android:text="START THE SERVICE"
         android:textColor="#05B60E"
         android:textColorHighlight="@color/colorAccent"
+        android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/btnStopStartedService"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -39,6 +40,7 @@
         android:onClick="stopStartedService"
         android:text="Stop the Service"
         android:textColor="#A70909"
+        android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/btnStartIntentService"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -67,11 +69,56 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:fadingEdge="horizontal|vertical"
         android:onClick="startIntentService"
         android:text="Start Intent Service"
         android:textColor="#A813C2"
+        android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStopStartedService" />
+
+    <TextView
+        android:id="@+id/txvStartedServiceResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Started Service Result Here"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartStartedService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvIntentServiceResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intent Result Here"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartIntentService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="moveToSecondActivity"
+        android:text="Bound Service Activity"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartIntentService" />
 </androidx.constraintlayout.widget.ConstraintLayout>
